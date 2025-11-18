@@ -15,12 +15,12 @@
 #define SCROLL 1
 
 // スクロール量の設定
+
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
 
 // #include <input/processors.dtsi>
 //  &trackball_listener {
 //     input-processors = <&zip_temp_layer 4 500>;
-
 //     scroll {
 //         layers = <3>;
 //         input-processors =
@@ -43,10 +43,12 @@
 / {
     behaviors {
         // スクロール用のbehaviorの設定
+
         scroll_down_up: behavior_sensor_rotate_mouse_wheel_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>; // スクロールのタップ時間
         };
 
@@ -61,7 +63,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo 5>;
+            bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo 1>;
         };
     };
 };
