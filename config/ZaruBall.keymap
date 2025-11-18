@@ -65,6 +65,24 @@
             tapping-term-ms = <200>;
             bindings = <&mt RCTL LANG1>, <&mo RAISE>, <&mo 1>;
         };
+
+        td3: td3 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp LCLK>, <&kp COMMA>;
+
+            label = "TD3";
+        };
+
+        td4: td4 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp RCLK>, <&kp DOT>;
+
+            label = "TD4";
+        };
     };
 };
 
@@ -114,6 +132,15 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        Mouse_Mid_Button {
+            bindings = <&mkp MCLK>;
+            key-positions = <48 49>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
