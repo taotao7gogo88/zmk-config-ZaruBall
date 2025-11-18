@@ -134,6 +134,15 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        Mouse_Mid_Button {
+            bindings = <&mkp MCLK>;
+            key-positions = <64 65>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
