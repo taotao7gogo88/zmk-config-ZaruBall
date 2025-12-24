@@ -73,7 +73,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&mt RCTRL LANG1>, <&mo 3>, <&mo 4>;
+            bindings = <&mt RIGHT_SHIFT LANG1>, <&mo 3>, <&mo 4>;
         };
 
         // Customed Hold-Tap for SandS
